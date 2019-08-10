@@ -1,48 +1,55 @@
-print("::KALKULATOR::")
+print("::CALCULATOR::")
 
 def menu():
     print("Menu\n"
-          "1 - dodawanie\n"
-          "2 - odejmowanie\n"
-          "3 - mnożenie\n"
-          "4 - dzielenie\n"
-          "5 - potęgowanie\n")
+          "1 - addition\n"
+          "2 - subtraction\n"
+          "3 - multiplication\n"
+          "4 - division\n"
+          "5 - exponentiation\n")
 
-def dodawanie():
-    a = (input("Wpisz pierwsza liczbę :"))
-    b = (input("Wpisz drugą liczbę :"))
-    wynik = float(a)+float(b)
+def addition():
+    first_number = (input("Enter first number :"))
+    second_number = (input("Enter second number :"))
+    wynik = float(first_number)+float(second_number)
     return wynik
-def odejmowanie():
-    a = input("Pierwsza liczba ")
-    b = input("Druga liczba ")
-    wynik = float(a) - float(b)
+def subtraction():
+    first_number = input("Enter first number :")
+    second_number = input("Enter second number :")
+    wynik = float(first_number) - float(second_number)
     return wynik
-def mnozenie():
-    a = input("Pierwsza liczba ")
-    b = input("Druga liczba ")
-    wynik = float(a) * float(b)
+def multiplication():
+    first_number = input("Enter first number :")
+    second_number = input("Enter second number :")
+    wynik = float(first_number) * float(second_number)
     return wynik
-def dzielenie():
-    a = input("Pierwsza liczba ")
-    b = input("Druga liczba ")
-    wynik = float(a) / float(b)
+def division():
+    first_number = input("Enter first number ")
+    second_number = input("Enter second number ")
+    wynik = float(first_number) / float(second_number)
     return wynik
-def potegowanie():
-    a = input("Liczba ")
-    b = input("Potęga ")
-    wynik = float(a) ** float(b)
+def exponentiation():
+    first_number = input("Enter first number :")
+    second_number = input("Power :")
+    wynik = float(first_number) ** float(second_number)
     return wynik
 
 print(menu())
 
-funkcja = input("Co wybierasz ? :")
-while True:
-    if funkcja == "1": print("dodaj\n", dodawanie())
-    elif funkcja == "2": print("odejmij\n", odejmowanie())
-    elif funkcja == "3": print("mnóż\n", mnozenie())
-    elif funkcja == "4": print("dziel\n", dzielenie())
-    elif funkcja == "5": print("potęguj\n", potegowanie())
+
+def Choose_option(choose_number):
+    if choose_number == "1": print("add\n", addition())
+    elif choose_number == "2": print("subtract\n", subtraction())
+    elif choose_number == "3": print("multiply\n", multiplication())
+    elif choose_number == "4": print("divide\n", division())
+    elif choose_number == "5": print("intensifies\n", exponentiation())
     else:
-        print("mamy bląd")
-        break
+        choose_number = input("Try Again")
+        Choose_option(choose_number);
+
+
+choose_number = input("What you choose? :")
+Choose_option(choose_number);
+
+
+
